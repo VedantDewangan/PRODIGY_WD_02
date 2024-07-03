@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .digit {
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .lap-item {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.25rem;
+      margin-bottom: 0.25rem;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white flex items-center justify-center h-screen">
+
+  <div class="bg-gray-800 p-10 rounded-lg shadow-2xl max-w-md w-full">
+    <h1 class="text-4xl font-bold mb-6 text-center text-yellow-400">Stopwatch</h1>
+    <div id="display" class="digit text-6xl text-center mb-8">00:00:00.00</div>
+    <div class="flex justify-center mb-6">
+      <button id="startStopBtn" class="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded mx-2 transition duration-300">Start</button>
+      <button id="resetBtn" class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded mx-2 transition duration-300">Reset</button>
+      <button id="lapBtn" class="bg-green-500 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded mx-2 transition duration-300">Lap</button>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold mb-4 text-center text-yellow-400">Laps</h2>
+      <ul id="laps" class="list-decimal pl-5 text-center" style="list-style: none;"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
